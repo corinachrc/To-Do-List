@@ -1,0 +1,115 @@
+/* You can add global styles to this file, and also import other style files */
+.container{
+    max-width: 500px;
+    min-height: 700px;
+    margin: 30px auto;
+    box-shadow: 15px 8px rgb(5, 57, 57);
+    padding:10px;
+    border: 3px solid darkcyan;
+    border-radius: 0 15% 8% 0;
+    background-color:rgb(237, 235, 235);
+  }
+
+h1{
+  text-align:center;
+  color: darkcyan;
+  font-size: 300%;
+
+}
+
+.inputform{
+  display:flex;
+}
+
+input{
+  width: 95%;
+  border-color: darkcyan;
+  border-width: 3px;
+  border-radius: 15%;
+  padding: 5px;
+  font-weight:700;
+  font-size: 150%;
+  color:rgb(2, 61, 61);
+}
+.fa-square-plus, .fa-square-check{
+  margin-left:3px;
+  font-size: 250%;
+  padding: 4px;;
+  color: rgb(54, 157, 157);
+
+}
+.fa-square-plus:hover, .fa-square-check:hover{
+  color: rgb(3, 121, 121);
+}
+.list{
+ min-height: 400px;;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+.emptylist{
+  width:100%;
+  font-size:50px;
+  color:darkcyan;
+  text-align: center;
+}
+li{
+  margin:8px;
+  padding:5px 5px 5px 15px;
+  border:1px solid rgb(5, 57, 57);
+  color:rgb(3, 32, 32);
+  border-radius: 10%;
+  box-shadow: 3px 3px rgb(5, 57, 57);
+  display:flexbox;
+
+}
+
+
+li.inactive{
+  font-size: 130%;
+  font-weight: 700;
+  background-color: rgb(191, 214, 214)
+}
+li.inactive:hover{
+  background-color: darkcyan;
+  color:white;
+}
+
+li.active{
+  font-size: 180%;
+  font-weight: 900;
+  background-color: darkcyan;
+  color: white;
+}
+.fa-pen-to-square,.fa-square-xmark{
+  margin-right: 5px;
+  margin-left: 5px;
+
+}
+.fa-pen-to-square{
+  font-size: 110%;
+  color:rgb(98, 53, 130);
+}
+.fa-pen-to-square:hover{
+  font-size: 110%;
+  color:rgb(70, 10, 113);
+}
+.fa-square-xmark{
+  font-size: 110%;
+  color:rgb(136, 59, 59);
+  margin-top:0px;
+  padding-top:0px;
+}
+.fa-square-xmark:hover{
+  color:rgb(144, 19, 19)
+}
+.rowIcons{
+  float:right;
+}
+
+@media only screen and (max-width: 600px) {
+  body{
+    width: 90%;
+  }
+}

@@ -1,0 +1,32 @@
+<div class="container">
+
+<h1>TO DO APP</h1>
+<div class="inputform">
+  <input type="text" [(ngModel)]="toDoBuffer">
+  <i class="fa-solid fa-square-plus"
+    (click)="addToList()"
+    *ngIf="editInProgress==false"></i>
+  <i class="fa-solid fa-square-check" (click)="saveItem()" *ngIf="editInProgress==true"></i>
+</div>
+<div class="list">
+  <ul>
+    <div class="emptylist" *ngIf="listOfTodos.length==0">
+      <p><i class="fa-solid fa-list-check"></i></p>
+      <p>The list is empty</p>
+      <p><i class="fa-solid fa-face-grin-wide"></i></p>
+    </div>
+    <li *ngFor="let todo of listOfTodos, let index=index"
+          (click)="toggleActiveClass(index)"
+          [ngClass]="{
+              'active': todo.isActive==true,
+              'inactive': todo.isActive==false
+            }">
+          <div class="rowIcons" *ngIf="todo.isActive">
+              <span><i class="fa-solid fa-pen-to-square" (click)="editItem(index)"></i></span>
+              <span><i class="fa-solid fa-square-xmark" (click)="removeItem(index)"></i></span>
+          </div>
+      {{index+1}}. {{todo.name}}
+    </li>
+  </ul>
+</div>
+</div>
